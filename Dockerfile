@@ -12,7 +12,7 @@
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
 
-FROM node:8.1
+FROM node:8.1.0
 MAINTAINER Philippe Mulet "philippe_mulet@fr.ibm.com"
 
 # Install the application
