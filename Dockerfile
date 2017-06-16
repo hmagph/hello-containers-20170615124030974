@@ -12,7 +12,7 @@
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
 
-FROM node:4.8
+FROM node
 MAINTAINER Philippe Mulet "philippe_mulet@fr.ibm.com"
 
 # Install the application
@@ -34,7 +34,7 @@ RUN grep -q '^password.*required' /etc/pam.d/common-password && sed -i 's/^passw
 
 # Vulnerability Advisor : Temporarily remove a specific <package> that was discovered vulnerable
 # RUN dpkg --purge --force-all <package>
-# RUN dpkg --purge --force-all libgcrypt20
+RUN dpkg --purge --force-all libgcrypt20
 # RUN apt-get install libgcrypt20
 
 # Define command to run the application when the container starts
