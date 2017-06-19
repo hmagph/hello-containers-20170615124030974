@@ -4,16 +4,12 @@ metadata:
   name: hello
   labels:
     app: hello
-    tier: frontend
 spec:
-  # if your cluster supports it, uncomment the following to automatically create
-  # an external load-balanced IP for the frontend service.
-  # type: LoadBalancer
+  type: LoadBalancer
   ports:
   - port: 80
   selector:
     app: hello
-    tier: frontend
 ---
 apiVersion: extensions/v1beta1
 kind: Deployment
@@ -25,7 +21,6 @@ spec:
     metadata:
       labels:
         app: hello
-        tier: frontend
     spec:
       containers:
       - name: hello
