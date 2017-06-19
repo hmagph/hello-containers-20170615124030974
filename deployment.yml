@@ -30,6 +30,3 @@ spec:
   # label keys and values that must match in order to receive traffic for this service
   selector:
     app: hello-app
-  selector: 
-    name: wildfly
-    context: docker-k8s-lab
